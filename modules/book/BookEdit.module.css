@@ -1,0 +1,14 @@
+
+.editForm {
+    display: flex;
+    align-items: center;
+  }
+
+  .editInput {
+    flex: 1;
+    margin-right: 0.5rem;
+  }
+
+  .editButton {
+    flex-shrink: 0;
+  }
