@@ -2,17 +2,23 @@
 import React, { useState } from "react";
 import styles from "./BookShow.module.css";
 import BookEdit from "./BookEdit";
+import { useDispatch } from "react-redux";
+import { deleteBookAsync } from "./shared/state/bookThunks";
 
-const BookShow = ({ book, onDelete, onEdit }) => {
+const BookShow = ({ book }) => {
+  const dispatch = useDispatch();
   const [editing, setEditing] = useState(false);
 
   const handleEditClick = () => {
     setEditing(true);
   };
 
-  const handleUpdateBook = (updatedBook) => {
-    onEdit(updatedBook);
-    setEditing(false);
+  const handleUpdateBook = ({ updated }) => {
+    setEditing(updated);
+  };
+
+  const handleDelete = async (id) => {
+    await dispatch(deleteBookAsync(id));
   };
 
   return (
@@ -33,7 +39,7 @@ const BookShow = ({ book, onDelete, onEdit }) => {
             <div className={`buttons ${styles.buttons}`}>
               <button
                 className={`button is-danger ${styles.icon} ${styles.deleteIcon}`}
-                onClick={() => onDelete(book.id)}
+                onClick={() => handleDelete(book.id)}
               >
                 <span className="icon">
                   <i className="fas fa-trash"></i>

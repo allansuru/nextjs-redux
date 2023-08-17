@@ -1,7 +1,10 @@
 import React, { useState, FormEvent } from "react";
+import { useDispatch } from "react-redux";
 import { BookCreateProps } from "./shared/interfaces/book";
+import { createBookAsync } from "./shared/state/bookThunks";
 
-const BookCreate: React.FC<BookCreateProps> = ({ onBookCreate }) => {
+const BookCreate: React.FC<BookCreateProps> = () => {
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [nameError, setNameError] = useState("");
@@ -17,7 +20,7 @@ const BookCreate: React.FC<BookCreateProps> = ({ onBookCreate }) => {
     setImageUrlError("");
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     if (!name || name.length < 3) {
@@ -31,7 +34,7 @@ const BookCreate: React.FC<BookCreateProps> = ({ onBookCreate }) => {
     }
 
     const newBook = { name, imageUrl, id: Math.floor(Math.random() * 1000000) };
-    onBookCreate(newBook);
+    await dispatch(createBookAsync(newBook));
     setName("");
     setImageUrl("");
   };

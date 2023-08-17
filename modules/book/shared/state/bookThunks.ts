@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { get, del, put, post } from '../../../../core/services/api.service'; // Import your api.service functions
+import { get, del, put, post } from '@core/services/api.service';
 import { Book } from '../interfaces/book';
 
 export const fetchBooks = createAsyncThunk('book/fetchBooks', async () => {
