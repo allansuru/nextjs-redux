@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "name": "The Mandalorian 13",
+      "name": "The Mandalorian 123",
       "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/the-mandalorian-poster-s3-serieslp_aa55f7a4.jpeg?region=0%2C0%2C1024%2C1517",
       "id": 409748
     },
@@ -9,6 +9,21 @@
       "name": "House of Dragones",
       "imageUrl": "https://resizing.flixster.com/QrT-Krzry3Ikh6cH4u9bHCYH_6w=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvNGZmZmJkN2YtZDA4YS00ZjkzLWE3OTMtNTgyNDE5NWM3YjhmLmpwZw==",
       "id": 202974
+    },
+    {
+      "name": "Dragon Ball",
+      "imageUrl": "https://images7.alphacoders.com/611/thumbbig-611138.webp",
+      "id": 730075
+    },
+    {
+      "name": "One Piece",
+      "imageUrl": "https://images5.alphacoders.com/606/606284.jpg",
+      "id": 478283
+    },
+    {
+      "name": "Homem Aranha",
+      "imageUrl": "https://sm.ign.com/ign_br/screenshot/default/spider-man-2002-banner_k5qn.jpg",
+      "id": 278282
     }
   ]
 }

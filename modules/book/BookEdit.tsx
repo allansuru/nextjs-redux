@@ -1,12 +1,16 @@
 // modules/book/BookEdit.tsx
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { updateBookAsync } from "./shared/state/bookThunks";
 
 const BookEdit = ({ book, onUpdate }) => {
+  const dispatch = useDispatch();
   const [newName, setNewName] = useState(book.name);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onUpdate({ ...book, name: newName });
+    dispatch(updateBookAsync({ ...book, name: newName }));
+    onUpdate({ updated: false });
   };
 
   return (
