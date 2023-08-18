@@ -4,15 +4,18 @@ import Layout from "../core/components/Layout";
 import { Provider } from "react-redux";
 import store from "../core/store";
 import { ToastContainer } from "react-toastify";
+import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      <ToastContainer />
-    </Provider>
+    <SessionProvider session={pageProps.session}>
+      <Provider store={store}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+        <ToastContainer />
+      </Provider>
+    </SessionProvider>
   );
 }
 
