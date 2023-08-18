@@ -15,7 +15,16 @@ const AuthForm = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    // criar autenticação por credencials
+    try {
+      // Autenticar com credenciais
+      await signIn("credentials", {
+        ...data,
+      });
+
+      router.push("/");
+    } catch (error) {
+      console.error("Error signing in:", error);
+    }
   };
 
   return (

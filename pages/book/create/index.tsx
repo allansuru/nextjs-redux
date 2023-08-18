@@ -1,4 +1,5 @@
 import React from "react";
+import withAuth from "../../../core/components/WithAuth";
 import BookCreate from "../../../modules/book/BookCreate";
 
 const CreateBookPage = () => {
@@ -9,4 +10,4 @@ const CreateBookPage = () => {
   );
 };
 
-export default CreateBookPage;
+export default withAuth(CreateBookPage);
