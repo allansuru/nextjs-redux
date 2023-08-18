@@ -4,6 +4,7 @@ import { fetchBooks } from "../../modules/book/shared/state/bookThunks";
 import BookList from "../../modules/book/BookList";
 import Link from "next/link";
 import Loading from "../../core/components/Loading";
+import withAuth from "../../core/components/WithAuth";
 
 const BookPage = () => {
   const dispatch = useDispatch();
@@ -37,4 +38,4 @@ const BookPage = () => {
   );
 };
 
-export default BookPage;
+export default withAuth(BookPage);
