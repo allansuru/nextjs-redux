@@ -1,6 +1,10 @@
+import { GetServerSideProps } from "next";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
+
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AuthForm = () => {
   const router = useRouter();
@@ -11,11 +15,7 @@ const AuthForm = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    const result = await signIn("google", { redirect: false });
-    if (result?.url) {
-      debugger;
-      router.push("/");
-    }
+    // criar autenticação por credencials
   };
 
   return (
@@ -64,6 +64,17 @@ const AuthForm = () => {
           >
             Entrar
           </button>
+
+          <div className="mt-4 text-center text-gray-500 flex items-center justify-center space-x-2">
+            <span>Entre com</span>
+            <button
+              type="button"
+              onClick={() => signIn("google")}
+              className="rounded-full bg-blue-600 hover:bg-blue-700 text-white p-1 text-xs flex items-center justify-center"
+            >
+              <FontAwesomeIcon icon={faGoogle} className="mr-1" /> Google
+            </button>
+          </div>
         </form>
       </div>
     </>
