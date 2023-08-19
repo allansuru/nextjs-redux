@@ -16,7 +16,6 @@ const AuthForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Autenticar com credenciais
       await signIn("credentials", {
         ...data,
       });

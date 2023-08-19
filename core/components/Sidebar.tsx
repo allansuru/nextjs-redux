@@ -1,4 +1,3 @@
-// components/Sidebar.tsx
 import Link from "next/link";
 
 const Sidebar = () => {
@@ -11,7 +10,6 @@ const Sidebar = () => {
         <li>
           <Link href="/book">Book</Link>
         </li>
-        {/* Adicione mais links aqui, se necessário */}
       </ul>
     </div>
   );

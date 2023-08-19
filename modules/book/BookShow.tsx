@@ -1,4 +1,3 @@
-// modules/book/BookShow.tsx
 import React, { useState } from "react";
 import styles from "./BookShow.module.css";
 import BookEdit from "./BookEdit";

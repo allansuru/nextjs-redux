@@ -9,16 +9,16 @@ import withAuth from "../../core/components/WithAuth";
 const BookPage = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books);
-  const [isLoading, setIsLoading] = useState(true); // State for loading indicator
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         await dispatch(fetchBooks());
-        setIsLoading(false); // Turn off loading indicator once data is fetched
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching books:", error);
-        setIsLoading(false); // Also turn off loading indicator in case of error
+        setIsLoading(false);
       }
     };
 

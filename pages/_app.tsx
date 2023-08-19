@@ -1,4 +1,3 @@
-// pages/_app.tsx
 import "../core/styles/global.css";
 import Layout from "../core/components/Layout";
 import { Provider } from "react-redux";

@@ -9,20 +9,16 @@ const withAuth = (WrappedComponent) => {
 
     useEffect(() => {
       if (status === "authenticated") {
-        // Usuário autenticado, permitir acesso à página
         return;
       }
 
       if (status === "loading") {
-        // Aguarde até que o estado da sessão seja carregado
         return;
       }
 
-      // Redirecionar para a página de autenticação
       router.push("/auth");
     }, [status, router]);
 
-    // Renderizar o componente se o usuário estiver autenticado
     return status === "authenticated" ? <WrappedComponent {...props} /> : null;
   };
 

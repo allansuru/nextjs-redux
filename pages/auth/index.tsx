@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   if (session) {
     return {
       redirect: {
-        destination: "/", // Redirecione para a página principal
+        destination: "/",
         permanent: false,
       },
     };

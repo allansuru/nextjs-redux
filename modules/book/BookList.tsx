@@ -1,4 +1,3 @@
-// modules/book/BookList.tsx
 import React from "react";
 import BookShow from "./BookShow";
 
