@@ -1,4 +1,3 @@
-// modules/book/BookEdit.tsx
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateBookAsync } from "./shared/state/bookThunks";

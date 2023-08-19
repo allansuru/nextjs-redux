@@ -2,11 +2,11 @@ import React, { useState, FormEvent } from "react";
 import { useDispatch } from "react-redux";
 import { BookCreateProps } from "./shared/interfaces/book";
 import { createBookAsync } from "./shared/state/bookThunks";
-import { useRouter } from "next/router"; // Import useRouter from next/router
+import { useRouter } from "next/router";
 
 const BookCreate: React.FC<BookCreateProps> = () => {
   const dispatch = useDispatch();
-  const router = useRouter(); // Use useRouter from next/router
+  const router = useRouter();
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [nameError, setNameError] = useState("");
