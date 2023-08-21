@@ -7,18 +7,31 @@ import {
     updateBookAsync,
 } from './bookThunks';
 
-const initialState: Book[] = [];
+const initialState =
+{
+    books: Array<Book>,
+    loading: false,
+    error: null
+}
 
 const bookSlice = createSlice({
-    name: 'books',
+    name: 'book',
     initialState,
     reducers: {
         // ... outras ações ...
     },
     extraReducers: (builder) => {
         builder
+            .addCase(fetchBooks.pending, (state) => {
+                state.loading = true;
+            })
             .addCase(fetchBooks.fulfilled, (state, action) => {
-                return action.payload; // Update the state with fetched books
+                state.loading = false;
+                state.books = action.payload;
+            })
+            .addCase(fetchBooks.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message;
             })
             .addCase(createBookAsync.fulfilled, (state, action) => {
                 state.push(action.payload);

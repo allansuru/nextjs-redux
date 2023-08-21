@@ -10,6 +10,9 @@ const Sidebar = () => {
         <li>
           <Link href="/book">Book</Link>
         </li>
+        <li>
+          <Link href="/user">User</Link>
+        </li>
       </ul>
     </div>
   );

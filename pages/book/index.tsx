@@ -8,17 +8,15 @@ import withAuth from "../../core/components/WithAuth";
 
 const BookPage = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books);
-  const [isLoading, setIsLoading] = useState(true);
+  const books = useSelector((state: store) => state?.book?.books);
+  const loading = useSelector((state) => state?.book?.loading);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         await dispatch(fetchBooks());
-        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching books:", error);
-        setIsLoading(false);
       }
     };
 
@@ -33,7 +31,8 @@ const BookPage = () => {
       >
         Create Book
       </Link>
-      {isLoading ? <Loading /> : <BookList books={books} />}
+
+      {loading ? <Loading /> : books && <BookList books={books} />}
     </div>
   );
 };

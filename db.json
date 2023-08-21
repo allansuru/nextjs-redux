@@ -33,5 +33,30 @@
       "email": "allansuru23@gmail.com",
       "image": "https://lh3.googleusercontent.com/a/AAcHTtebZfJ4cmVv8hzkwZQsJ1gFatiHDPKv9U-fk6v_W3lLhTQ=s96-c"
     }
+  ],
+  "users": [
+    {
+      "name": "Alice",
+      "description": "Lorem ipsum dolor sit amet.",
+      "email": "alice@example.com",
+      "dateOfBirth": "1990-01-15",
+      "dateCreated": "2022-03-20T08:00:00Z",
+      "isAdmin": true
+    },
+    {
+      "name": "Bob",
+      "description": "Consectetur adipiscing elit.",
+      "email": "bob@example.com",
+      "dateOfBirth": "1985-06-25",
+      "dateCreated": "2021-11-10T10:30:00Z",
+      "isAdmin": false
+    }
   ]
 }
+
+
+
+
+
+
+
