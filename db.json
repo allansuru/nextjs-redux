@@ -25,5 +25,13 @@
       "imageUrl": "https://sm.ign.com/ign_br/screenshot/default/spider-man-2002-banner_k5qn.jpg",
       "id": 278282
     }
+  ],
+  "signin": [
+    {
+      "id": 1,
+      "name": "Allan SuRu",
+      "email": "allansuru23@gmail.com",
+      "image": "https://lh3.googleusercontent.com/a/AAcHTtebZfJ4cmVv8hzkwZQsJ1gFatiHDPKv9U-fk6v_W3lLhTQ=s96-c"
+    }
   ]
 }
