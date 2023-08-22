@@ -4,7 +4,7 @@ import { Book } from '../interfaces/book';
 
 export const fetchBooks = createAsyncThunk('book/fetchBooks', async () => {
     const response = await get('books');
-    return response as Book[];
+    return response as Book;
 });
 
 export const deleteBookAsync = createAsyncThunk<void, number>('book/deleteBook', async (id) => {

@@ -34,17 +34,16 @@ const bookSlice = createSlice({
                 state.error = action.error.message;
             })
             .addCase(createBookAsync.fulfilled, (state, action) => {
-                state.push(action.payload);
+                state.books.push(action.payload);
             })
             .addCase(updateBookAsync.fulfilled, (state, action) => {
-                const updatedIndex = state.findIndex((book) => book.id === action.payload.id);
-                if (updatedIndex !== -1) {
-                    state[updatedIndex] = action.payload;
-                }
+                state.books = state.books.map((book) =>
+                    book.id === action.payload.id ? action.payload : book
+                );
             })
             .addCase(deleteBookAsync.fulfilled, (state, action) => {
-                return state.filter((book) => book.id !== action.payload);
-            });
+                state.books = state.books.filter((book) => book.id !== action.payload);
+            })
     },
 });
 

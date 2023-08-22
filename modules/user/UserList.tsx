@@ -60,23 +60,6 @@ const UserList = ({ users }) => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex justify-between items-center mb-4 mt-2">
-        <div>
-          <h2 className="text-xl font-bold">Users</h2>
-          <p className="text-sm">
-            A list of all the users in your account including their name, title,
-            email and role.
-          </p>
-        </div>
-        <div className="mt-3 mb-3">
-          <Link
-            href="/user/create"
-            className="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:ring focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-white"
-          >
-            Create User
-          </Link>
-        </div>
-      </div>
       <table
         className="min-w-full divide-y divide-gray-200"
         {...getTableProps()}

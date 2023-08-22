@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "name": "The Mandalorian 123",
+      "name": "The Mandalorian 1234",
       "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/the-mandalorian-poster-s3-serieslp_aa55f7a4.jpeg?region=0%2C0%2C1024%2C1517",
       "id": 409748
     },
@@ -41,9 +41,8 @@
       "description": "Lorem ipsum dolor sit amet.",
       "email": "alice@example.com",
       "dateOfBirth": "1990-01-15",
-      "isAdmin": true,
-      "dateCreated": "2022-03-20T08:00:00Z"
-
+      "dateCreated": "2022-03-20T08:00:00Z",
+      "isAdmin": true
     },
     {
       "id": 2,
@@ -51,16 +50,8 @@
       "description": "Consectetur adipiscing elit.",
       "email": "bob@example.com",
       "dateOfBirth": "1985-06-25",
-      "isAdmin": false,
       "dateCreated": "2021-11-10T10:30:00Z",
-
+      "isAdmin": false
     }
   ]
 }
-
-
-
-
-
-
-
