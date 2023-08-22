@@ -41,8 +41,9 @@
       "description": "Lorem ipsum dolor sit amet.",
       "email": "alice@example.com",
       "dateOfBirth": "1990-01-15",
-      "dateCreated": "2022-03-20T08:00:00Z",
-      "isAdmin": true
+      "isAdmin": true,
+      "dateCreated": "2022-03-20T08:00:00Z"
+
     },
     {
       "id": 2,
@@ -50,8 +51,9 @@
       "description": "Consectetur adipiscing elit.",
       "email": "bob@example.com",
       "dateOfBirth": "1985-06-25",
+      "isAdmin": false,
       "dateCreated": "2021-11-10T10:30:00Z",
-      "isAdmin": false
+
     }
   ]
 }
