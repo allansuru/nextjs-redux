@@ -9,7 +9,7 @@ import {
 
 const initialState =
 {
-    books: Array<Book>,
+    books: [],
     loading: false,
     error: null
 }

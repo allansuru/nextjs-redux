@@ -8,7 +8,7 @@ import withAuth from "../../core/components/WithAuth";
 
 const BookPage = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state: store) => state?.book?.books);
+  const books = useSelector((state) => state?.book?.books);
   const loading = useSelector((state) => state?.book?.loading);
 
   useEffect(() => {

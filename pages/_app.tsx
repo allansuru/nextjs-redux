@@ -5,6 +5,10 @@ import store from "../core/store";
 import { ToastContainer } from "react-toastify";
 import { SessionProvider } from "next-auth/react";
 
+import Modal from "react-modal";
+
+Modal.setAppElement("#__next");
+
 function MyApp({ Component, pageProps }) {
   return (
     <SessionProvider session={pageProps.session}>

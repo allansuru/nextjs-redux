@@ -36,6 +36,7 @@
   ],
   "users": [
     {
+      "id": 1,
       "name": "Alice",
       "description": "Lorem ipsum dolor sit amet.",
       "email": "alice@example.com",
@@ -44,6 +45,7 @@
       "isAdmin": true
     },
     {
+      "id": 2,
       "name": "Bob",
       "description": "Consectetur adipiscing elit.",
       "email": "bob@example.com",

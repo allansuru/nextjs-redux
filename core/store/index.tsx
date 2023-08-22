@@ -7,7 +7,7 @@ import userReducer from "../../modules/user/shared/state/userReducer";
 const store = configureStore({
   reducer: {
     book: bookReducer,
-    users: userReducer,
+    user: userReducer,
   },
   middleware: [thunk],
 });
