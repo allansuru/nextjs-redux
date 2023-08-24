@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "name": "The Mandalorian 1234",
+      "name": "The Mandalorian",
       "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/the-mandalorian-poster-s3-serieslp_aa55f7a4.jpeg?region=0%2C0%2C1024%2C1517",
       "id": 409748
     },
@@ -24,6 +24,11 @@
       "name": "Homem Aranha",
       "imageUrl": "https://sm.ign.com/ign_br/screenshot/default/spider-man-2002-banner_k5qn.jpg",
       "id": 278282
+    },
+    {
+      "name": "teste",
+      "imageUrl": "teste",
+      "id": 279696
     }
   ],
   "signin": [
@@ -36,13 +41,13 @@
   ],
   "users": [
     {
+      "dateCreated": "2023-08-24T13:48:23.477Z",
       "id": 1,
-      "name": "Alice",
-      "description": "Lorem ipsum dolor sit amet.",
+      "isAdmin": true,
+      "dateOfBirth": "1990-01-15T02:00:00.000Z",
       "email": "alice@example.com",
-      "dateOfBirth": "1990-01-15",
-      "dateCreated": "2022-03-20T08:00:00Z",
-      "isAdmin": true
+      "description": "Lorem ipsum dolor sit amet.",
+      "name": "Alice in Chains"
     },
     {
       "id": 2,
@@ -52,6 +57,33 @@
       "dateOfBirth": "1985-06-25",
       "dateCreated": "2021-11-10T10:30:00Z",
       "isAdmin": false
+    },
+    {
+      "isAdmin": false,
+      "dateOfBirth": "2023-08-09T03:00:00.000Z",
+      "email": "tste@teste.com",
+      "description": "teste 123",
+      "name": "Teste",
+      "id": 803,
+      "dateCreated": "2023-08-24T13:36:18.523Z"
+    },
+    {
+      "isAdmin": false,
+      "dateOfBirth": "2023-08-17T03:00:00.000Z",
+      "email": "asasas@teste",
+      "description": "asasa",
+      "name": "teste",
+      "id": 865,
+      "dateCreated": "2023-08-24T13:42:29.943Z"
+    },
+    {
+      "isAdmin": false,
+      "dateOfBirth": "2023-08-10T03:00:00.000Z",
+      "email": "es@TESE.COM",
+      "description": "12t",
+      "name": "teste",
+      "id": 144,
+      "dateCreated": "2023-08-24T13:48:02.029Z"
     }
   ]
 }

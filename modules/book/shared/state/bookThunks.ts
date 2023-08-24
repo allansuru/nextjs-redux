@@ -13,7 +13,6 @@ export const deleteBookAsync = createAsyncThunk<void, number>('book/deleteBook',
 });
 
 export const createBookAsync = createAsyncThunk<Book, Book>('book/createBook', async (book) => {
-
     const response = await post('books', book);
     return response;
 });
