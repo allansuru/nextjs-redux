@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { createUser, updateUser } from "./shared/state/userThunk";
 import { User } from "./shared/interfaces/user";
+import { format } from "date-fns";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -41,6 +42,7 @@ const UserDetailsForm = ({ isEditing, userId }) => {
       ...formData,
       id: isEditing ? formData.id : Math.floor(Math.random() * 1000),
       dateCreated: new Date().toISOString(),
+      dateOfBirth: format(new Date(formData.dateOfBirth), "yyyy-MM-dd"),
     };
 
     isEditing ? dispatch(updateUser(payload)) : dispatch(createUser(payload));
