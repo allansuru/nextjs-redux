@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import { createUser, updateUser } from "./shared/state/userThunk";
+import { createUser, resetUser, updateUser } from "./shared/state/userThunk";
 import { User } from "./shared/interfaces/user";
 import { format } from "date-fns";
 
@@ -31,6 +31,8 @@ const UserDetailsForm = ({ isEditing, userId }) => {
     state.user.users.find((user) => user.id === Number(userId))
   );
 
+  const success = useSelector((state) => state.user.success);
+
   const { register, formState, handleSubmit } = useForm({
     mode: "onChange",
     resolver: yupResolver(schema),
@@ -46,8 +48,15 @@ const UserDetailsForm = ({ isEditing, userId }) => {
     };
 
     isEditing ? dispatch(updateUser(payload)) : dispatch(createUser(payload));
-    router.push("/user");
   };
+
+  useEffect(() => {
+    console.log(success);
+    if (success) {
+      router.push("/user");
+      dispatch(resetUser());
+    }
+  }, [success]);
 
   return (
     <>

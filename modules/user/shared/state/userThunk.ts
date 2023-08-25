@@ -21,3 +21,5 @@ export const updateUser = createAsyncThunk<User, User>("user/updateUser", async 
     return response;
 });
 
+export const resetUser = createAsyncThunk("user/resetUser", async (user) => { });
+

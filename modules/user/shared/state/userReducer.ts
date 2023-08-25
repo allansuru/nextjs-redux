@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User } from '../interfaces/user';
-import { fetchUsers, createUser, updateUser } from './userThunk'
+import { fetchUsers, createUser, updateUser, resetUser } from './userThunk'
 
 const initialState =
 {
     users: [],
     loading: false,
-    error: null
+    error: null,
+    success: false
 }
 
 const userSlice = createSlice({
@@ -29,18 +30,21 @@ const userSlice = createSlice({
                 state.error = action.error.message;
             })
             .addCase(createUser.fulfilled, (state, action) => {
-                debugger
+                state.success = true
                 state.users.push(action.payload);
             })
             .addCase(updateUser.fulfilled, (state, action) => {
-                debugger
+                state.success = true
                 const updatedIndex = state.users.findIndex(
                     (user) => user.id === action.payload.id
                 );
                 if (updatedIndex !== -1) {
                     state.users[updatedIndex] = action.payload;
                 }
-            });
+            })
+            .addCase(resetUser.fulfilled, (state, action) => {
+                state.success = false
+            })
     },
 });
 
